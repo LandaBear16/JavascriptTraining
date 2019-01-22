@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-
+      scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>MyPhoto</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <style>
+      div.container,
+      div.container-fluid {
+        border: 2px solid blue;
+        background: #999;
+      }
+
+      .row {
+        border: 1px solid red;
+        background: #798;
+        min-height: 10rem;
+        background: rgba(255, 0, 0, 0.1);
+      }
+
+      .row div {
+        border: 1px solid brown;
+        background: cornsilk;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Our Print Sizes</h1>
+      <div class="row">
+        <div class="col-sm-1">6x5</div>
+        <div class="col-sm-1">8x10</div>
+        <div class="col-sm-1">11x17</div>
+        <div class="col-sm-1">12x18</div>
+        <div class="col-sm-1">16x20</div>
+        <div class="col-sm-1">18x24</div>
+        <div class="col-sm-1">19x27</div>
+        <div class="col-sm-1">20x30</div>
+        <div class="col-sm-1">22x28</div>
+        <div class="col-sm-1">24x36</div>
+        <div class="col-sm-1">27x39</div>
+        <div class="col-sm-1">27x40</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-3">Small</div>
+        <div class="col-sm-6 col-md-3">Medium</div>
+        <div class="col-sm-6 col-md-3">Large</div>
+        <div class="col-sm-6 col-md-3">Extra Large</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col">One of three columns</div>
+        <div class="col">One of three columns</div>
+        <div class="col">One of three columns</div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col">One of three columns</div>
+        <div class="col">One of three columns</div>
+        <div class="col">One of three columns</div>
+      </div>
+      <div class="row align-items-end">
+        <div class="col">One of three columns</div>
+        <div class="col">One of three columns</div>
+        <div class="col">One of three columns</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col align-self-start">
+          <span class="s">One</span> of three columns
+        </div>
+        <div class="col align-self-center" style="height: 100px;">
+          One of three columns
+        </div>
+        <div class="col align-self-end">One of three columns</div>
+      </div>
+    </div>
+
+    <div class="exampleWrapper">
+      <div class="alignItem">
+        <div class="container">
+          <div class="row move align-items-start">
+            <div class="col-md-4" style="height: 100px;">one Column</div>
+            <div class="col-md-8">
+              <button
+                class="btn btn-primary btn-block"
+                data-align="start"
+                data-example="alignItem"
+                style="height: 50px;"
+                onclick="align(this, 'align-items-')"
+              >
+                Start
+              </button>
+              <button
+                class="btn btn-primary btn-block"
+                data-align="center"
+                data-example="alignItem"
+                style="height: 50px;"
+                onclick="align(this, 'align-items-')"
+              >
+                Center
+              </button>
+              <button
+                class="btn btn-primary btn-block"
+                data-align="end"
+                data-example="alignItem"
+                style="height: 50px;"
+                onclick="align(this, 'align-items-')"
+              >
+                End
+              </button>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-md-12 codeSnippets ">
+              <div class="start">
+                &lt;div class="row align-items-start" &gt; <br />
+                &emsp;&lt;div class="col-md-4"&gt;&lt; <br />&lt;/div&gt;
+              </div>
+              <div class="center" style="display: none;">
+                &lt;div class="row align-items-center" &gt; <br />
+                &emsp;&lt;div class="col-md-4"&gt;&lt; <br />&lt;/div&gt;
+              </div>
+              <div class="end" style="display: none;">
+                &lt;div class="row align-items-end" &gt; <br />
+                &emsp;&lt;div class="col-md-4"&gt;&lt; <br />&lt;/div&gt;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alignSelf">
+        <div class="container">
+          <div class="row">
+            <div class="col align-self-start">One of three columns</div>
+            <div class="col align-self-center">One of three columns</div>
+            <div class="col align-self-end">One of three columns</div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <button
+                class="btn btn-primary btn-block"
+                data-align="start"
+                style="height: 50px;"
+                data-example="alignSelf"
+                onclick="align(this, 'align-self-')"
+              >
+                Start
+              </button>
+            </div>
+            <div class="col-md-4">
+              <button
+                class="btn btn-primary btn-block"
+                data-align="center"
+                style="height: 50px;"
+                data-example="alignSelf"
+                onclick="align(this, 'align-self-')"
+              >
+                Center
+              </button>
+            </div>
+            <div class="col-md-4">
+              <button
+                class="btn btn-primary btn-block"
+                data-align="end"
+                style="height: 50px;"
+                data-example="alignSelf"
+                onclick="align(this, 'align-self-')"
+              >
+                End
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hightlight">
+        <figure class="highlight">
+          <pre>
+            <code class="language-html text" data-lang="html">
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row align-items-start"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+                One of three columns
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+                One of three columns
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+                One of three columns
+              <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row align-items-center"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+                One of three columns
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+                One of three columns
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+                One of three columns
+              <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row align-items-end"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+                One of three columns
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+                One of three columns
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+                One of three columns
+              <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span></code></pre>
+        </figure>
+      </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

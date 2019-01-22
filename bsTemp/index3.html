@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-
+      scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>MyPhoto</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <style>
+      div.container,
+      div.container-fluid {
+        border: 2px solid blue;
+        background: #999;
+      }
+
+      .row {
+        border: 1px solid red;
+        background: #798;
+        min-height: 10rem;
+        background: rgba(255, 0, 0, 0.1);
+      }
+
+      .row div {
+        border: 1px solid brown;
+        background: cornsilk;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"><h1>Columns</h1></div>
+    <br />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">Hello</div>
+        <div class="col-md-6">World!</div>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="container">
+      <h3>Equal-width Columns</h3>
+      <div class="row">
+        <div class="col">1 of 2</div>
+        <div class="col">2 of 2</div>
+      </div>
+      <div class="row">
+        <div class="col">1 of 3</div>
+        <div class="col">2 of 3</div>
+        <div class="col">3 of 3</div>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="container">
+      <h3>Mixed breakpoints</h3>
+      <div class="row">
+        <div class="col">1 of 3</div>
+        <div class="col-6">2 of 3 (wider)</div>
+        <div class="col">3 of 3</div>
+      </div>
+      <div class="row">
+        <div class="col">1 of 3</div>
+        <div class="col-5">2 of 3 (wider)</div>
+        <div class="col">3 of 3</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-lg-2">column 1</div>
+        <div class="col-12 col-sm-6 col-lg-2">column 2</div>
+        <div class="col-12 col-sm-6 col-lg-2">column 3</div>
+        <div class="col-12 col-sm-6 col-lg-2">column 4</div>
+        <div class="col-12 col-sm-6 col-lg-2">column 5</div>
+        <div class="col-12 col-sm-6 col-lg-2">column 6</div>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="container">
+      <h3>Variable width content</h3>
+      <div class="row justify-content-md-center">
+        <div class="col col-md-2">2 columns</div>
+        <div class="col-md-auto">
+          <<<<<<<----- Variable width content -->>>>>>>
+        </div>
+        <div class="col col-md-2">2 columns</div>
+      </div>
+      <div class="row">
+        <div class="col">I take up rest of space</div>
+        <div class="col-md-auto">Variable width content</div>
+        <div class="col col-lg-2">2 columns</div>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="container">
+      <h3>Equal-width multi row</h3>
+      <div class="row">
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="w-100"></div>
+        <div class="col">col</div>
+        <div class="w-100"></div>
+        <div class="col">col</div>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-lg-2">column 1</div>
+        <div class="col-12 col-sm-6 col-lg-2">column 2</div>
+        <div class="col-12 col-sm-6 col-lg-2">column 3</div>
+        <div class="col-12 col-sm-6 col-lg-2">column 4</div>
+        <div class="col-12 col-sm-6 col-lg-2">column 5</div>
+        <div class="col-12 col-sm-6 col-lg-2">column 6</div>
+      </div>
+    </div>
+
+    <br />
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
