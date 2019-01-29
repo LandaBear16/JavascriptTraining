@@ -5,9 +5,16 @@ const restaurant = {
   checkAvailability: function(partySize) {
     let seatsLeft = this.guestCapacity - this.guestCount;
     return partySize <= seatsLeft;
+  },
+  seatParty: function(partySize) {
+    this.guestCount += partySize;
+  },
+  removeParty: function(partySize) {
+    this.guestCount -= partySize;
   }
 };
 
-let status = restaurant.checkAvailability(76);
-
-console.log(status);
+restaurant.seatParty(72);
+console.log(restaurant.checkAvailability(4));
+restaurant.removeParty(5);
+console.log(restaurant.checkAvailability(4));
