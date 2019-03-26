@@ -5,7 +5,7 @@ function assert(value, text) {
   var results = document.getElementById("results");
   if (!results) {
     results = document.createElement("ul");
-    results.setAttribute('id','results');
+    results.setAttribute('id', 'results');
     document.body.appendChild(results);
   }
   results.appendChild(li);

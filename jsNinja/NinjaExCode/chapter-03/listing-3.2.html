@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Storing a collection of unique functions</title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="../assert.css">
   <script src="../assert.js"></script>
 </head>
+
 <body>
   <script>
     var store = {
+      // Keeps track of the next available id to be assigned
       nextId: 1,
+
+      // Creates an object to serve as a cache to store functions 
       cache: {},
-      add: function(fn) {
+
+      // Adds a function to the cache only if it is unique
+      add: function (fn) {
+        console.log(fn.id);
         if (!fn.id) {
           fn.id = this.nextId++;
           this.cache[fn.id] = fn;
@@ -20,12 +28,14 @@
       }
     };
 
-    function ninja(){}
+    function ninja() { }
+    function ninja2() { }
 
     assert(store.add(ninja),
-           "Function was safely added.");
-    assert(!store.add(ninja),
-           "But it was only added once.");
+      "Function was safely added.");
+    assert(store.add(ninja2),
+      "But it was only added once.");
+    console.dir(store);
   </script>
 </body>
 
