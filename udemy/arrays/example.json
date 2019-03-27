@@ -1,0 +1,21 @@
+{
+    "Situation": {
+        "instance": "sit001",
+        "data properties": {
+            "date": "25/02/2015",
+            "updateTime": "07:29 pm",
+            "uncertainty": "60%"
+        },
+        "object properties": {
+            "has_a": {
+                "robberyReport": {
+                    "instance": "den001",
+                    "data properties": {
+                        "dataReport": "25/02/2015",
+                        "transcribedCall": "good night"
+                    }
+                }
+            }
+        }
+    }
+}
