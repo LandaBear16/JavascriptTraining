@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Illustrating the difference between function and method invocations</title>
   <meta charset="utf-8">
   <script src="../assert.js"></script>
   <link rel="stylesheet" type="text/css" href="../assert.css">
 </head>
+
 <body>
- <script>
-		function whatsMyContext() {
+  <script>
+    function whatsMyContext() {
       return this;
     }
-
+    console.log(whatsMyContext());
     assert(whatsMyContext() === window,
       "Function call on window");
 
@@ -21,18 +23,25 @@
       "Another function call in window");
 
     var ninja1 = {
+      name: "ninja 1",
       getMyThis: whatsMyContext
     };
+
+    console.log(ninja1.getMyThis());
 
     assert(ninja1.getMyThis() === ninja1,
       "Working with 1st ninja");
 
     var ninja2 = {
+      name: "ninja 2",
       getMyThis: whatsMyContext
     };
 
+    console.log(ninja2.getMyThis());
+
     assert(ninja2.getMyThis() === ninja2,
       "Working with 2nd ninja");
-	</script>
+  </script>
 </body>
+
 </html>
