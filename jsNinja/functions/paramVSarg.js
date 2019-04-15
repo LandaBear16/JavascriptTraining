@@ -1,23 +1,36 @@
+/* 
+    - Parameters are defined as part of the function definition.
+    - Arguments are values that we pass to the function.
+*/
+// Parameter -> (character)
 function beeCharmer(character) {
     return quote(character, "You're just a bee charmer, Idgie Threadgoode. That's what you are, a bee charmer.");
 }
 
+// Parameter -> (person, line)
 var quote = function (person, line) {
     return person + " - " + line;
 };
 
+/* 
+    Parameter -> name
+    Argument -> (name, "Towanda! Righter of Wrongs, Queen Beyond Compare!")
+*/
 var towanda = name => quote(name, "Towanda! Righter of Wrongs, Queen Beyond Compare!");
 
 console.log(beeCharmer("Ruth Jamison"));
-console.log(towanda("Evelyn Couch"));
-
 /*
 | Output:
     Ruth Jamison - You're just a bee charmer, Idgie Threadgoode. That's what you are, a bee charmer.
+|*/
+
+console.log(towanda("Evelyn Couch"));
+/*
+| Output:
     Evelyn Couch - Towanda! Righter of Wrongs, Queen Beyond Compare!
 |*/
 
-// Parameters are defined on the function definition.
+// Function with 6 parameters
 function laminatedFreebieList(person1, person2, person3, person4, person5, bumped) {
     console.log("First: " + person1);
     console.log("Bumped: " + bumped);
@@ -27,11 +40,9 @@ function laminatedFreebieList(person1, person2, person3, person4, person5, bumpe
     console.log("Fifth: " + person5);
 }
 
-/* List of arguments supplied at invocation are 
-assigned to the parameters above in order. So the first
-argument passed in is assigned to the first parameter and so on. 
-If there are more arguments passed than parameters, the extra argument is
-not assigned to any parameter names. */
+/*
+    Arguments supplied at invocation are assigned to the functions parameters. They are assigned in order, so the first argument passed in is assigned to the first function parameter, the second argument passed in is assigned to the second function parameter and so on. Any extra arguments passed in will not be assigned to any parameter names.
+*/
 laminatedFreebieList("Uma Thurman", "Winona Ryder",
     "Elizabeth Hurley", " Michelle Pfeiffer",
     "Dorothy Hamill", "Isabella Rossellini", "Pamela Anderson");
@@ -45,8 +56,9 @@ laminatedFreebieList("Uma Thurman", "Winona Ryder",
     Fifth: Dorothy Hamill
 |*/
 
-/* If only one argument passed it it will be assigned
-to the first parameter. */
+/* 
+    If only one argument passed in, it will be assigned to the first parameter. And the other parameters will be undefined. 
+*/
 laminatedFreebieList("You were on my list of five goofy coffeehouse guys I could sleep with, but yesterday you got bumped for that guy over there!");
 
 /*
@@ -61,7 +73,9 @@ laminatedFreebieList("You were on my list of five goofy coffeehouse guys I could
 
 // ----------- Rest Parameters ------------
 
-/* By prefixing the second parameter with ... turns it into an array. Which is the Rest Parameter. This contains the remaining arguments that have been passed in.   */
+/* 
+    By prefixing the last Parameter with ... turns it into the Rest Parameter. This allows you to store an indefinite number of arguments as an array. 
+*/
 function jungleBook(character, ...otherCharacters) {
     console.log(character);
     console.log(otherCharacters);
@@ -83,15 +97,18 @@ function iKnow(character, quote = "I know") {
 
 /* If when the function is invoked, you leave out the matching argument then the default is used. */
 iKnow("Princess Leia", "I love you");
+/*
+    Output:
+        Princess Leia - I love you
+*/
 
 /* However if you do not pass in the matching argument then the default is used. */
 iKnow("Han Solo");
 
 /*
-| Outout:
-        Princess Leia - I love you
+    Output:
         Han Solo - I know
-| */
+*/
 
 
 /* --------- Implicit Parameters ------------- */
@@ -154,32 +171,38 @@ jedi(); // Invoked as a function
 
 /*  2. As a method */
 
+// Creates a function that returns this (function context)
 function myContext() {
     return this;
 }
 
+// Will print the window object to the console.
 console.log(myContext());
 /*
 | Output:
     Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …}  
 | */
 
+// Creates an object
 var yoda = {
     name: "Yoda",
-    getMyContext: myContext
+    getMyContext: myContext // Assigns the function above to a property of the object
 }
 
+// Creates another object
 var mace = {
     name: "Mace Windu",
-    getMyContext: myContext
+    getMyContext: myContext // And again assigns the function above to a property of the object
 }
 
+// Prints the objects function context to the console
 console.log(yoda.getMyContext());
 /*
 | Output:
     {name: "Yoda", getMyContext: ƒ} 
 | */
 
+// Prints the objects function context to the console
 console.log(mace.getMyContext());
 /*
 | Output:
