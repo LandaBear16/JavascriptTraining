@@ -96,13 +96,6 @@ function iKnow(character, quote = "I know") {
 }
 
 /* If when the function is invoked, you leave out the matching argument then the default is used. */
-iKnow("Princess Leia", "I love you");
-/*
-    Output:
-        Princess Leia - I love you
-*/
-
-/* However if you do not pass in the matching argument then the default is used. */
 iKnow("Han Solo");
 
 /*
@@ -110,8 +103,16 @@ iKnow("Han Solo");
         Han Solo - I know
 */
 
+/* However if you pass in the matching argument then the default is overridden. */
+iKnow("Princess Leia", "I love you");
+/*
+    Output:
+        Princess Leia - I love you
+*/
+
 
 /* --------- Implicit Parameters ------------- */
+
 // The arguments parameter is a collection of all arguments passed to a function.
 function turtles(turtle1, turtle2, turtle3, turtle4) {
     // Arguments parameter (object) has a property named length, this provides the exact number of arguments passed.
