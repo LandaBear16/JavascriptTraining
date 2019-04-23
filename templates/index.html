@@ -35,53 +35,135 @@
         </div>
     </nav>
 
-    <h2 class="demoHeaders">Datepicker</h2>
-
 
     <div class="container">
         <div class="row">
             <div class="col">
-                <label>
+                <!-- <label> Week:
                     <input type="text" class="dateselect" required="required" />
                     <span><i class="far fa-calendar fa-1x"></i></span>
-                </label>
+                </label> -->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control dateselect" placeholder="Date" aria-label="Date"
+                        aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2"><i class="far fa-calendar fa-1x"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-1 border-bottom">
+            <div class="col-4 col-sm-6 col-lg-6">
+                <h3>Day</h3>
+            </div>
+            <div class="col-8 col-sm-6 col-lg-6">
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-lg-6">
+                        <h3>Project</h3>
+                    </div>
+                    <div class="col-6 col-sm-6 col-lg-6">
+                        <h3>Hours</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row wkDay">
+            <div class="col-4 col-sm-6 col-lg-6">
+                <h4>Mon</h4>
+            </div>
+            <div class="col-8 col-sm-6 col-lg-6 ">
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-lg-6">
+                        <input type="text" class="form-control" placeholder="Project" aria-label="...">
+                    </div>
+                    <div class="col-6 col-sm-6 col-lg-6">
+                        <input type="text" class="form-control" placeholder="8.00" aria-label="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row wkDay">
+            <div class="col-4 col-sm-6 col-lg-6">
+                <h4>Tue</h4>
+            </div>
+            <div class="col-8 col-sm-6 col-lg-6 ">
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-lg-6">
+                        <input type="text" class="form-control" placeholder="Project" aria-label="...">
+                    </div>
+                    <div class="col-6 col-sm-6 col-lg-6">
+                        <input type="text" class="form-control" placeholder="8.00" aria-label="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row wkDay">
+            <div class="col-4 col-sm-6 col-lg-6">
+                <h4>Wed</h4>
+            </div>
+            <div class="col-8 col-sm-6 col-lg-6 ">
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-lg-6">
+                        <input type="text" class="form-control" placeholder="Project" aria-label="...">
+                    </div>
+                    <div class="col-6 col-sm-6 col-lg-6">
+                        <input type="text" class="form-control" placeholder="8.00" aria-label="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row wkDay">
+            <div class="col-4 col-sm-6 col-lg-6">
+                <h4>Thur</h4>
+            </div>
+            <div class="col-8 col-sm-6 col-lg-6 ">
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-lg-6">
+                        <input type="text" class="form-control" placeholder="Project" aria-label="...">
+                    </div>
+                    <div class="col-6 col-sm-6 col-lg-6">
+                        <input type="text" class="form-control" placeholder="8.00" aria-label="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row wkDay">
+            <div class="col-4 col-sm-6 col-lg-6">
+                <h4>Fri</h4>
+            </div>
+            <div class="col-8 col-sm-6 col-lg-6 ">
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-lg-6">
+                        <input type="text" class="form-control" placeholder="Project" aria-label="...">
+                    </div>
+                    <div class="col-6 col-sm-6 col-lg-6">
+                        <input type="text" class="form-control" placeholder="8.00" aria-label="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row wkDay">
+            <div class="col-4 col-sm-6 col-lg-6">
+                <h4>Total</h4>
+            </div>
+            <div class="col-8 col-sm-6 col-lg-6 ">
+                <div class="row d-flex justify-content-end">
+                    <div class="col-6 col-sm-6 col-lg-6 ">
+                        <input type="text" class="form-control" placeholder="40.00" aria-label="...">
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-xs-9">Mon</div>
-            <div class="col-xs-3">8</div>
-        </div>
-        <div class="row">
-            <div class="col-md-9">Tue</div>
-            <div class="col-md-3">8</div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-9">Wed</div>
-            <div class="col-md-3">8</div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-9">Thurs</div>
-            <div class="col-md-3">8</div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-9">Fri</div>
-            <div class="col-md-3">8</div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-9">Total</div>
-            <div class="col-md-3">40</div>
-        </div>
-        <div class="row">
-            <div class="mx-auto" style="width: 200px;">
-                <button type="button" class="btn btn-primary btn-sm">Small button</button>
+            <div class="mx-auto">
+                <button type="button" class="btn btn-primary btn-lg"
+                    style="width: 300px; margin-top: 20px;">Submit</button>
             </div>
         </div>
-    </div>
     </div>
 
 
